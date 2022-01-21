@@ -1,0 +1,26 @@
+<div>
+  <h3>Editar</h3>
+</div>
+<form class="example-container" [formGroup]="pessoaForm" (ngSubmit)="update(pessoaForm.value)">
+  <mat-form-field>
+    <input matInput name="nome" placeholder="Nome" formControlName="nome">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput name="idade" placeholder="Idade" formControlName="idade" type="number">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput name="email" placeholder="E-mail" formControlName="email" type="email">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput name="telefone" placeholder="Telefone" formControlName="telefone" type="tel">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput name="sexo" placeholder="Sexo" formControlName="sexo">
+  </mat-form-field>
+
+
+  <button type="submit" [disabled]="!pessoaForm.valid" mat-button color="primary" >Adicionar</button>
+</form>
